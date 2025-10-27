@@ -1,10 +1,37 @@
 
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
+  import { VitePWA } from 'vite-plugin-pwa';
   import path from 'path';
 
   export default defineConfig({
-    plugins: [react()],
+    plugins: [
+      react(),
+      VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      manifest: {
+        name: 'Pempek Putri',
+        short_name: 'Pempek',
+        description: 'Aplikasi Pembukuan Pempek Putri',
+        theme_color: '#F97316', // orange-500
+        background_color: '#fff',
+        display: 'standalone',
+        icons: [
+          {
+            src: '/img/Logo.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/img/Logo.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
+    }),
+    ],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
