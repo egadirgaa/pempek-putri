@@ -5,8 +5,9 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { ShoppingBag } from 'lucide-react';
+import Logo from '../img/Logo.png';
 
 export function Login() {
   const [email, setEmail] = useState('');
@@ -42,7 +43,7 @@ export function Login() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center space-y-3">
           <div className="mx-auto bg-gradient-to-r from-orange-500 to-red-500 w-16 h-16 rounded-full flex items-center justify-center">
-            <ShoppingBag className="h-8 w-8 text-white" />
+            <img src={Logo} alt="Logo Pempek Putri" />
           </div>
           <CardTitle className="text-2xl">Pempek Putri</CardTitle>
           <CardDescription>

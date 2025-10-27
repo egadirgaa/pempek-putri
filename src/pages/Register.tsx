@@ -44,7 +44,7 @@ export function Register() {
 
       if (error) throw error;
 
-      toast.success('Registrasi berhasil! Silakan login.');
+      toast.success('Registrasi berhasil! Silahkan Verifikasi Email untuk Login .');
       navigate('/login');
     } catch (error: any) {
       toast.error(error.message || 'Registrasi gagal. Silakan coba lagi.');
