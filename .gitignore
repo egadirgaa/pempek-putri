@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+.cache/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# OS generated files
+*.tmp
+*.bak
+
+# Coverage and testing
+coverage/
+*.lcov
+
+# Supabase local config (kalau pakai supabase CLI)
+supabase/.temp/
+supabase/.branches/
+supabase/.env
